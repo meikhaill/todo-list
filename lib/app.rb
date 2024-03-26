@@ -10,7 +10,6 @@ get '/' do
 end
 
 post '/add_todo' do 
-  binding.pry
   todo = params[:todo]
   if todo 
     $todos << todo 
