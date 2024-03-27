@@ -11,7 +11,7 @@ end
 
 post '/add_todo' do 
   todo = params[:todo]
-  if todo 
+  unless todo.strip.empty?
     $todos << todo 
   end
   redirect '/'

@@ -1,19 +1,125 @@
-#todo-header {
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
 
 body {
-  background-color: rgb(35, 35, 35);
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-.todo-entry {
+
+#todo-header {
+  background-color: #fffcfc;
+  color: #000000;
+  padding: 20px 0;
   text-align: center;
-  color: white;
+  font-size: 56px;
+  font-weight: bold;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
+}
+
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
 }
 
 ul li,
 ol li {
-  list-style-position: inside;
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
   text-align: center;
+  color: #333;
+}
+
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  align-items: center;
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center; 
+ width: 100%; 
+ max-width: 400px; 
+ margin: 10px auto; 
+}
+
+
+input[type="text"] {
+ flex-grow: 1;
+}
+
+input[type="submit"] {
+  flex-grow: 1; 
+  margin-right: 10px; 
+}
+
+
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
 }
