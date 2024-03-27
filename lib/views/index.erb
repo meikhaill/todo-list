@@ -7,13 +7,13 @@
     <title>Todo List</title>
  </head>
  <body>
-    <div class="container">
+    <div class="list">
       <h1 id="todo-header">Todo List</h1>
-      <ul class="todo-list">
-        <% @todos.each do |todo| %>
-          <li class="todo-entry"><%= todo %></li>
-        <% end %>
-      </ul>
+        <ul class="todo-list">
+          <% @todos.each do |todo| %>
+            <li class="todo-entry"><%= todo %></li>
+          <% end %>
+        </ul>
       <form class="add-todo-form" action="/add_todo" method="post">
         <input type="text" name="todo" placeholder="Enter a new todo">
         <button type="submit">Add Todo</button>
