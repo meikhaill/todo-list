@@ -61,7 +61,7 @@ ol li {
 
 
 button {
-  background-color: #007BFF;
+  background-color: #00ff44;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -70,8 +70,14 @@ button {
   cursor: pointer;
   margin-top: 20px;
   align-items: center;
+  left: 400px;
+  position: relative;
+    top: 2px;
+    right: 2px;
+    left: 100px;
+    !important;
   
-}
+} 
 
 button:hover {
   background-color: #0056b3;
@@ -122,4 +128,27 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #0056b3;
+
+}
+
+.delete-button {
+  background-color: #dc3545;
+  /* Red background for the delete button */
+  color: white;
+  /* White text */
+  border: none;
+  /* Remove borders */
+  border-radius: 4px;
+  /* Rounded borders */
+  cursor: pointer;
+  /* Mouse pointer on hover */
+  padding: 5px 10px;
+  /* Some padding */
+  margin-left: 10px;
+  /* Add some space between the todo text and the delete button */
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  /* Darker red background on hover */
 }

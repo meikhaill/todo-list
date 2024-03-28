@@ -10,15 +10,21 @@
     <div class="container">
       <h1 id="todo-header">GOTODO</h1>
       <ul class="todo-list">
-        <% @todos.each do |todo| %>
-          <li class="todo-entry"><%= todo %></li>
+        <% @todos.each_with_index do |todo, index| %>
+          <li class="todo-entry">
+            <%= todo %>
+            <form class="delete-todo-form" action="/delete_todo" method="post">
+              <input type="hidden" name="index" value="<%= index %>">
+              <button type="submit" class="delete-button">Delete</button>
+            </form>
+          </li>
         <% end %>
       </ul>
       <form class="add-todo-form" action="/add_todo" method="post">
         <input type="text" name="todo" placeholder="Enter a new todo">
-        <button type="submit">Add Todo</button>
+        <button type="submit" id='button1'>Add Todo</button>
       </form>
     </div>
  </body>
-</html>
+</html> 
 

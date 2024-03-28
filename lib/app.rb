@@ -16,3 +16,11 @@ post '/add_todo' do
   end
   redirect '/'
 end
+
+post '/delete_todo' do
+ index = params[:index].to_i
+ if index >= 0 && index < $todos.length
+    $todos.delete_at(index)
+ end
+ redirect '/' # Redirect back to the home page to see the updated list
+end
