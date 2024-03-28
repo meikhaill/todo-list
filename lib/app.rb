@@ -24,3 +24,8 @@ post '/delete_todo' do
  end
  redirect '/' # Redirect back to the home page to see the updated list
 end
+
+post '/clear_todo' do
+ $todos = []
+ redirect '/'
+end
