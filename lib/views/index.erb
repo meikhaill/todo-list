@@ -8,7 +8,8 @@
  </head>
  <body>
     <div class="container">
-      <h1 id="todo-header">GOTODO</h1>
+    <button id="night-mode-toggle">Toggle Night Mode</button>
+      <h1 id="todo-header">TODO</h1>
       <ul class="todo-list">
         <% @todos.each_with_index do |todo, index| %>
           <li class="todo-entry">
@@ -27,7 +28,7 @@
       <form action="/clear_todo" method="post">
         <button type="submit" class="clear-button">Clear All Todos</button>
       </form>
-      <button id="night-mode-toggle">Toggle Night Mode</button>
+      
     </div>
  </body>
 </html> 

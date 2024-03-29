@@ -1,7 +1,34 @@
 require 'sinatra'
 require 'pry'
 
+enable :sessions
+
 $todos = []
+
+get '/login' do
+ erb :login
+end
+
+post '/login' do
+ username = params[:username]
+ password = params[:password]
+
+ # Example: Check against a hardcoded user
+ if username == "admin" && password == "password"
+    session[:user_id] = 1 # Simulate a logged-in user
+    redirect '/'
+ else
+    @error = "Invalid username or password."
+    erb :login
+ end
+end
+
+
+
+get '/logout' do
+ session.clear
+ redirect '/login'
+end
 
 get '/' do
   @todos = $todos
@@ -28,4 +55,11 @@ end
 post '/clear_todo' do
  $todos = []
  redirect '/'
+
 end
+
+# before do
+#  unless session[:user_id]
+#     redirect '/login'
+#  end
+# end
